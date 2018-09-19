@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIBackEnd.Web", "TUIBackEn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIBackEnd.Test", "TUIBackEnd.Test\TUIBackEnd.Test.csproj", "{7BC1F0DD-81F6-4BB0-A398-D5018069B312}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScriptSQL", "ScriptSQL", "{82D4AD5D-9A34-43FE-A874-3B52A4E4BD7D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Script_DB_TUI.sql = ..\..\Script_DB_TUI.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
