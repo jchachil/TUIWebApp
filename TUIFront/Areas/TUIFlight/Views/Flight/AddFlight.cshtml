@@ -1,0 +1,149 @@
+﻿@model TUIFront.Areas.TUIFlight.Models.FlightModel
+@{
+    ViewBag.Title = "AddFlight";
+}
+
+
+<h2 class="title_form">Add flight</h2>
+@using (Html.BeginForm("AddFlight", "Flight", FormMethod.Post, new { @id = "frmCreateFlight", @class = "form form-horizontal" }))
+{
+
+    <div class="form-group marginB">
+        <label class="col-lg-4 control-label">Departure country</label>
+        <div class="col-lg-8">
+            @Html.DropDownListFor(model => model.SelectedDepCountryId, Model.DepartCountries, htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <label class="col-lg-4 control-label">Departure Airport</label>
+        <div class="col-lg-8">
+            @Html.DropDownListFor(model => model.DepartureAirport_Id, Model.DepartAirports, htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <label class="col-lg-4 control-label">Destination country</label>
+        <div class="col-lg-8">
+            @Html.DropDownListFor(model => model.SelectedDestCountryId, Model.DestinationCountries, htmlAttributes: new { @class = "form-control" })
+        </div>
+
+
+        <label class="col-lg-4 control-label">Destination Airport</label>
+        <div class="col-lg-8">
+            @Html.DropDownListFor(model => model.DestinationAirport_Id, Model.DestinationAirports, htmlAttributes: new { @class = "form-control" })
+        </div>
+
+        <label class="col-lg-4 control-label">Aircraft Consumption per distance</label>
+        <div class="col-lg-8">
+            @Html.TextBoxFor(model => model.AirCratfFuelComsumpDistance, htmlAttributes: new { @class = "form-control" })
+        </div>
+        <span class="msg_error">
+            @Html.ValidationMessageFor(m => m.AirCratfFuelComsumpDistance)
+        </span>
+
+        <label class="col-lg-4 control-label">Flight time</label>
+        <div class="col-lg-8">
+            @Html.TextBoxFor(model => model.FlightTime, htmlAttributes: new { @class = "form-control" })
+        </div>
+        <span class="msg_error">
+            @Html.ValidationMessageFor(m => m.FlightTime)
+        </span>
+
+        <label class="col-lg-4 control-label">Takeoff Effort</label>
+        <div class="col-lg-8">
+            @Html.TextBoxFor(model => model.TakeOffEffort, htmlAttributes: new { @class = "form-control" })
+        </div>
+        <span class="msg_error">
+            @Html.ValidationMessageFor(m => m.TakeOffEffort)
+        </span>
+        
+        
+        <div class="col-lg-10 class_btn">
+            <button type="submit" class=" btn btn-primary btn-sm">
+                <i class="fa fa-save"></i> Enregistrer
+            </button>
+
+            <button type="button" class=" btn btn-primary btn-sm" onclick="location.href = '@Url.Action("Index", "Flight")'">
+                <i class="fa fa-save"></i> Flight List
+            </button>
+        </div>
+
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            ;
+
+            $('#AirCratfFuelComsumpDistance').val('');
+            $('#FlightTime').val('');
+            $('#TakeOffEffort').val('');
+
+        });
+
+
+
+        $('#SelectedDepCountryId').ready(function () {
+
+            var selectedCountry = $('#SelectedDepCountryId').val();
+            fillDepartAirportList(selectedCountry);
+
+
+        });
+        $('#SelectedDestCountryId').ready(function () {
+
+            var selectedCountry = $('#SelectedDestCountryId').val();
+            fillDestAirportList(selectedCountry);
+
+
+        });
+
+
+        $('#SelectedDepCountryId').on('change', function () {
+            var selectedCountry = ($(this).val());
+            fillDepartAirportList(selectedCountry);
+        });
+
+        $('#SelectedDestCountryId').on('change', function () {
+            var selectedCountry = ($(this).val());
+            fillDestAirportList(selectedCountry);
+        });
+
+        function fillDepartAirportList(selectedCountry) {
+            $.ajax(
+              {
+                  url: "@Url.Action("GetAirportsByCountryId", "Flight")",
+                  type: "POST",
+                  data: 'CountryId=' + selectedCountry,
+                  dataType: "json",
+                  success: function (airports) {
+
+                      $('#DepartureAirport_Id').empty();
+
+                      $.each(airports, function (i, item) {
+                          $('#DepartureAirport_Id').append('<option value="' + item.Id + '">' + item.AirportCode + ' ' + item.AirportName + '</option>');
+                      });
+                  }
+              });
+        }
+
+        function fillDestAirportList(selectedCountry) {
+            $.ajax(
+              {
+                  url: "@Url.Action("GetAirportsByCountryId", "Flight")",
+                  type: "POST",
+                  data: 'CountryId=' + selectedCountry,
+                  dataType: "json",
+                  success: function (airports) {
+
+                      $('#DestinationAirport_Id').empty();
+
+                      $.each(airports, function (i, item) {
+                          $('#DestinationAirport_Id').append('<option value="' + item.Id + '">' + item.AirportCode + ' ' + item.AirportName + '</option>');
+                      });
+                  }
+              });
+        }
+
+    </script>
+}

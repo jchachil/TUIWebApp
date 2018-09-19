@@ -1,0 +1,64 @@
+﻿@model TUIFront.Areas.TUIFlight.Models.FlightModel
+@{
+    ViewBag.Title = "DetailFlight";
+}
+
+<h2 class="title_form">Detail flight</h2>
+
+<div class="form-group marginB">
+    <label class="col-lg-6 control-label">Departure country</label>
+    <div class="col-lg-6">
+        <label class="control-label font_light"> @Model.DepartureCountryName</label>
+    </div>
+
+    <label class="col-lg-6 control-label">Departure Airport</label>
+    <div class="col-lg-6">
+        <label class="control-label font_light"> @Model.Airport.AirportName</label>
+    </div>
+
+
+    <label class="col-lg-6 control-label">destination country</label>
+    <div class="col-lg-6">
+        <label class="control-label font_light"> @Model.DestinationCountryName</label>
+    </div>
+
+
+    <label class="col-lg-6 control-label">destination Airport</label>
+    <div class="col-lg-6">
+        <label class="control-label font_light"> @Model.Airport1.AirportName</label>
+    </div>
+
+    <label class="col-lg-6 control-label">Aircraft Consumption per distance</label>
+    <div class="col-lg-6">
+        <label class="control-label font_light"> @Model.AirCratfFuelComsumpDistance</label>
+    </div>
+
+    <label class="col-lg-6 control-label">Flight time</label>
+    <div class="col-lg-6">
+        <label class="control-label font_light"> @Model.FlightTime</label>
+    </div>
+
+    <label class="col-lg-6 control-label">Takeoff Effort</label>
+    <div class="col-lg-6">
+        <label class="control-label font_light"> @Model.TakeOffEffort</label>
+    </div>
+    <label class="col-lg-6 control-label">FuelNeeded</label>
+    <div class="col-lg-6">
+        <label class="control-label font_light"> @Model.FuelNeeded</label>
+    </div>
+
+    <label class="col-lg-6 control-label">Flight distance</label>
+    <div class="col-lg-6">
+        <label class="control-label font_light"> @Model.FlightDistance</label>
+    </div>
+
+
+
+
+
+
+    <button type="button" style="float:right" class=" btn btn-primary btn-sm" onclick="location.href = '@Url.Action("Index", "Flight")'">
+        <i class="fa fa-save"></i> Flight List
+    </button>
+
+</div>

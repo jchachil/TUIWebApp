@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIFrontEnd.Web", "TUIFront\TUIFrontEnd.Web.csproj", "{6BD81E43-BF66-4332-84AF-1307807CF442}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIFrontEnd.Util", "TUIFrontEnd.Util\TUIFrontEnd.Util.csproj", "{634CE6CE-9E89-4876-B6E8-23BB94D177F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIBackEnd.DAL", "TUIBackEnd.DAL\TUIBackEnd.DAL.csproj", "{6CB48D29-E2DF-4D8D-B818-656453D34B3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIBackEnd.BLL", "TUIBackEnd.BLL\TUIBackEnd.BLL.csproj", "{9CAC7C52-BE14-4643-BBBC-CC82185FAFA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIBackEnd.Web", "TUIBackEnd.Web\TUIBackEnd.Web.csproj", "{B72CB969-D3F0-47B0-9F0A-8CE091598104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUIBackEnd.Test", "TUIBackEnd.Test\TUIBackEnd.Test.csproj", "{7BC1F0DD-81F6-4BB0-A398-D5018069B312}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BD81E43-BF66-4332-84AF-1307807CF442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BD81E43-BF66-4332-84AF-1307807CF442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BD81E43-BF66-4332-84AF-1307807CF442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BD81E43-BF66-4332-84AF-1307807CF442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{634CE6CE-9E89-4876-B6E8-23BB94D177F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634CE6CE-9E89-4876-B6E8-23BB94D177F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634CE6CE-9E89-4876-B6E8-23BB94D177F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634CE6CE-9E89-4876-B6E8-23BB94D177F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB48D29-E2DF-4D8D-B818-656453D34B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB48D29-E2DF-4D8D-B818-656453D34B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB48D29-E2DF-4D8D-B818-656453D34B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB48D29-E2DF-4D8D-B818-656453D34B3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CAC7C52-BE14-4643-BBBC-CC82185FAFA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CAC7C52-BE14-4643-BBBC-CC82185FAFA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CAC7C52-BE14-4643-BBBC-CC82185FAFA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CAC7C52-BE14-4643-BBBC-CC82185FAFA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72CB969-D3F0-47B0-9F0A-8CE091598104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72CB969-D3F0-47B0-9F0A-8CE091598104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72CB969-D3F0-47B0-9F0A-8CE091598104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72CB969-D3F0-47B0-9F0A-8CE091598104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BC1F0DD-81F6-4BB0-A398-D5018069B312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC1F0DD-81F6-4BB0-A398-D5018069B312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC1F0DD-81F6-4BB0-A398-D5018069B312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC1F0DD-81F6-4BB0-A398-D5018069B312}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
